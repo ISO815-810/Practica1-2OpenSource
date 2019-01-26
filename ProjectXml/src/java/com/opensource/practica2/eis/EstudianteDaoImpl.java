@@ -36,13 +36,6 @@ public class EstudianteDaoImpl implements EstudianteDao {
     }
 
     @Override
-    public Estudiantes findEstudiantesByMatricula(Estudiantes estudiante) {
-        Query query = em.createQuery("FROM Estudiantes e WHERE e.matriculaEstudiante = :matriculaEstudiante");
-        query.setParameter("matriculaEstudiante", estudiante.getMatriculaEstudiante());
-        return (Estudiantes) query.getSingleResult();
-    }
-
-    @Override
     public void insertEstudiantes(Estudiantes estudiante) {
         em.persist(estudiante);
     }

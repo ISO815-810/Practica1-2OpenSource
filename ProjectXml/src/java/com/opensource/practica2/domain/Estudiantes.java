@@ -80,6 +80,10 @@ public class Estudiantes implements Serializable {
         this.id = id;
     }
 
+    public Estudiantes(String cedulaEstudiante) {
+        this.cedulaEstudiante = cedulaEstudiante;
+    }
+
     public Estudiantes(Integer id, String cedulaEstudiante, String matriculaEstudiante, short creditosTotal, short creditosCursados) {
         this.id = id;
         this.cedulaEstudiante = cedulaEstudiante;
