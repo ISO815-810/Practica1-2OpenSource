@@ -30,7 +30,7 @@ public class EstudianteDaoImpl implements EstudianteDao {
 
     @Override
     public Estudiantes findEstudiantesByCedula(Estudiantes estudiante) {
-        Query query = em.createQuery("FROM Estudiantes e WHERE e.cedulaEstudiante = :cedulaEstudiante");
+        Query query = em.createQuery("from Estudiantes e where e.cedulaEstudiante =: cedulaEstudiante");
         query.setParameter("cedulaEstudiante", estudiante.getCedulaEstudiante());
         return (Estudiantes) query.getSingleResult();
     }

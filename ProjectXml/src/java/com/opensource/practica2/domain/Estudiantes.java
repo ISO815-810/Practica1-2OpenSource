@@ -29,7 +29,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Table(name = "estudiantes")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Estudiantes.findAll", query = "SELECT e FROM Estudiantes e")
+      @NamedQuery(name = "Estudiantes.findAll", query = "SELECT e FROM Estudiantes e")
     , @NamedQuery(name = "Estudiantes.findById", query = "SELECT e FROM Estudiantes e WHERE e.id = :id")
     , @NamedQuery(name = "Estudiantes.findByCedulaEstudiante", query = "SELECT e FROM Estudiantes e WHERE e.cedulaEstudiante = :cedulaEstudiante")
     , @NamedQuery(name = "Estudiantes.findByMatriculaEstudiante", query = "SELECT e FROM Estudiantes e WHERE e.matriculaEstudiante = :matriculaEstudiante")
@@ -84,7 +84,9 @@ public class Estudiantes implements Serializable {
         this.cedulaEstudiante = cedulaEstudiante;
     }
 
-    public Estudiantes(Integer id, String cedulaEstudiante, String matriculaEstudiante, short creditosTotal, short creditosCursados) {
+    public Estudiantes(Integer id, String cedulaEstudiante, String matriculaEstudiante, 
+            short creditosTotal, short creditosCursados) {
+        
         this.id = id;
         this.cedulaEstudiante = cedulaEstudiante;
         this.matriculaEstudiante = matriculaEstudiante;
