@@ -17,37 +17,44 @@ public class EstudianteDaoImpl implements EstudianteDao {
 
     @PersistenceContext(unitName = "ProjectXmlPU")
     EntityManager em;
-    
+
     @Override
     public List<Estudiantes> findAllEstudiantes() {
         return em.createNamedQuery("Estudiantes.findAll").getResultList();
     }
 
     @Override
-    public Estudiantes findEstudiantesById(Estudiantes estudiante) {  
+    public Estudiantes findEstudiantesById(Estudiantes estudiante) {
         return em.find(Estudiantes.class, estudiante.getId());
     }
 
     @Override
     public Estudiantes findEstudiantesByCedula(Estudiantes estudiante) {
+        Query query = em.createQuery("FROM Estudiantes e WHERE e.cedulaEstudiante = :cedulaEstudiante");
+        query.setParameter("cedulaEstudiante", estudiante.getCedulaEstudiante());
+        return (Estudiantes) query.getSingleResult();
     }
 
     @Override
     public Estudiantes findEstudiantesByMatricula(Estudiantes estudiante) {
+        Query query = em.createQuery("FROM Estudiantes e WHERE e.matriculaEstudiante = :matriculaEstudiante");
+        query.setParameter("matriculaEstudiante", estudiante.getMatriculaEstudiante());
+        return (Estudiantes) query.getSingleResult();
     }
 
     @Override
     public void insertEstudiantes(Estudiantes estudiante) {
-        
+        em.persist(estudiante);
     }
 
     @Override
     public void updateEstudiantes(Estudiantes estudiante) {
-        
+        em.merge(estudiante);
     }
 
     @Override
     public void deleteEstudiantes(Estudiantes estudiante) {
+        estudiante = em.getReference(Estudiantes.class, estudiante.getId());
+        em.remove(estudiante);
     }
-    
 }
