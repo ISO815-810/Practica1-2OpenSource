@@ -34,6 +34,6 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>JerseyWebApplication</servlet-name>
-        <url-pattern>/api/*</url-pattern>
+        <url-pattern>/webresources/*</url-pattern>
     </servlet-mapping>
 </web-app>
