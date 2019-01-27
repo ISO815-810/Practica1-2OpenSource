@@ -35,10 +35,10 @@ public class EstudianteServiceImpl implements EstudianteServiceWS {
         return estudianteDao.findEstudiantesById(estudiante);
     }
 
-    @Override
-    public Estudiantes encontrarEstudiantesPorCedula(Estudiantes estudiante) {
-        return estudianteDao.findEstudiantesByCedula(estudiante);
-    }
+//    @Override
+//    public Estudiantes encontrarEstudiantesPorMatricula(Estudiantes estudiante) {
+//        return estudianteDao.findEstudiantesByMatricula(estudiante);
+//    }
 
     @Override
     public void registrarEstudiantes(Estudiantes estudiante) {

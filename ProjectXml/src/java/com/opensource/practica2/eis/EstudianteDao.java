@@ -18,7 +18,7 @@ public interface EstudianteDao {
 
     public Estudiantes findEstudiantesById(Estudiantes estudiante);
 
-    public Estudiantes findEstudiantesByCedula(Estudiantes estudiante);
+//    public Estudiantes findEstudiantesByMatricula(Estudiantes estudiante);
 
     public void insertEstudiantes(Estudiantes estudiante);
 

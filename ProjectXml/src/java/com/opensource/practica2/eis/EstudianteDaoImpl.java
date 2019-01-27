@@ -10,7 +10,6 @@ import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
 
 @Stateless
 public class EstudianteDaoImpl implements EstudianteDao {
@@ -28,13 +27,13 @@ public class EstudianteDaoImpl implements EstudianteDao {
         return em.find(Estudiantes.class, estudiante.getId());
     }
 
-    @Override
-    public Estudiantes findEstudiantesByCedula(Estudiantes estudiante) {
-        Query query = em.createQuery("from Estudiantes e where e.cedulaEstudiante =: cedulaEstudiante");
-        query.setParameter("cedulaEstudiante", estudiante.getCedulaEstudiante());
-        return (Estudiantes) query.getSingleResult();
-    }
-
+//    @Override
+//    public Estudiantes findEstudiantesByMatricula(Estudiantes estudiante) {
+//        Query query = em.createQuery("FROM Estudiantes e WHERE e.matriculaEstudiante = :matriculaEstudiante");
+//        query.setParameter("matriculaEstudiante", estudiante.getMatriculaEstudiante());
+//        return (Estudiantes) query.getSingleResult();
+//        return em.find(Estudiantes.class, estudiante.getMatriculaEstudiante());
+//    }
     @Override
     public void insertEstudiantes(Estudiantes estudiante) {
         em.persist(estudiante);

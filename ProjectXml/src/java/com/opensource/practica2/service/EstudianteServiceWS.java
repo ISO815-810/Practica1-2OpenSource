@@ -23,8 +23,8 @@ public interface EstudianteServiceWS {
     @WebMethod
     public Estudiantes encontrarEstudiantesPorId(Estudiantes estudiante);
 
-    @WebMethod
-    public Estudiantes encontrarEstudiantesPorCedula(Estudiantes estudiante);
+//    @WebMethod
+//    public Estudiantes encontrarEstudiantesPorMatricula(Estudiantes estudiante);
 
     @WebMethod
     public void registrarEstudiantes(Estudiantes estudiante);

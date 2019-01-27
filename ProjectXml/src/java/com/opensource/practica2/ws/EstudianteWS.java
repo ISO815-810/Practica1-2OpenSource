@@ -33,19 +33,19 @@ public class EstudianteWS {
         return estudianteService.listarEstudiantes();
     }
 
-//    @GET
-//    @Produces(value = {MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-//    @Path("{id}")//esto hace referencia a /estudiantes/{id}
-//    public Estudiantes encontrarEstudiantePorId(@PathParam("id") int id) {
-//        return estudianteService.encontrarEstudiantesPorId(new Estudiantes(id));
-//    }
-    
     @GET
     @Produces(value = {MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    @Path("{cedulaEstudiante}")//esto hace referencia a /estudiantes/{cedulaEstudiante}
-    public Estudiantes encontrarEstudiantePorCedula(@PathParam("cedulaEstudiante") int cedulaEstudiante) {
-        return estudianteService.encontrarEstudiantesPorCedula(new Estudiantes(cedulaEstudiante));
+    @Path("{id}")//esto hace referencia a /estudiantes/{id}
+    public Estudiantes encontrarEstudiantePorId(@PathParam("id") int id) {
+        return estudianteService.encontrarEstudiantesPorId(new Estudiantes(id));
     }
+    
+//    @GET
+//    @Produces(value = {MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+//    @Path("{matriculaEstudiante}")//esto hace referencia a /estudiantes/{cedulaEstudiante}
+//    public Estudiantes encontrarEstudiantePorMatricula(@PathParam("matriculaEstudiante") int matriculaEstudiante) {
+//        return estudianteService.encontrarEstudiantesPorMatricula(new Estudiantes(matriculaEstudiante));
+//    }
 
     @POST
     @Produces(value = {MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
