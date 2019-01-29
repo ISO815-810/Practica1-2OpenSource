@@ -5,13 +5,21 @@
  */
 package com.opensource.practica2.servlet;
 
+import com.opensource.practica2.connection.Consultas;
+import com.opensource.practica2.xml.BuildXML;
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.file.FileAlreadyExistsException;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.w3c.dom.Document;
 
 /**
  *
@@ -37,7 +45,7 @@ public class XmlServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet XmlServlet</title>");            
+            out.println("<title>Servlet XmlServlet</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet XmlServlet at " + request.getContextPath() + "</h1>");
@@ -59,8 +67,7 @@ public class XmlServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-        
-        
+
     }
 
     /**
@@ -75,8 +82,37 @@ public class XmlServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-        
-        
+
+        if (request.getParameter("enviar") != null) {
+
+            String _path = request.getParameter("ruta");
+            String _outputFile = request.getParameter("archivo");
+
+            String pathComplete = _path + _outputFile + ".xml";
+
+            try {
+
+                /**
+                 * Step 1 : Build customer XML DOM
+                 */
+                Document xmlDoc = BuildXML.buildXML(Consultas.Estudiantes());
+
+                /**
+                 * Step 2: Write output to a file
+                 */
+                File outputFile = new File(pathComplete);
+                BuildXML.printDOM(xmlDoc, outputFile);
+
+            } catch (FileAlreadyExistsException | SQLException ex) {
+
+                System.out.println("file alread present at this location");
+
+                System.out.println("Really poor exception handling " + ex.toString());
+
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        }
     }
 
     /**

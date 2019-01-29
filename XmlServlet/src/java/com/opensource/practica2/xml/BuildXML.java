@@ -16,7 +16,7 @@ import org.w3c.dom.Element;
 public class BuildXML {
 
     /* printDOM will write the contents of xml document passed onto it out to a file*/
-    private static void printDOM(Document _xmlDoc, File _outputFile)
+    public static void printDOM(Document _xmlDoc, File _outputFile)
             throws Exception {
 
         OutputFormat outputFormat = new OutputFormat("XML", "UTF-8", true);
@@ -31,7 +31,7 @@ public class BuildXML {
     }
 
     /*Build XML DOcument from database. The XML object is returned to main method where it is written to flat file.*/
-    private static Document buildXML(ResultSet _studentRS)
+    public static Document buildXML(ResultSet _studentRS)
             throws Exception {
 
         Document xmlDoc = new DocumentImpl();
