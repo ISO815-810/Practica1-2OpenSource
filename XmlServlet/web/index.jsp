@@ -6,25 +6,25 @@
         <title>Index - Xml Generator</title>
     </head>
     <body>
-        <div class="card-content">
-            
-            <form action="index.jsp" method="POST">
-                
-                <div class="file-field input-field">
+        <div >
 
-                    <div class="file-path-wrapper">
-                        <input class="file-path validate" type="text" name="ruta" size="50">
+            <form action="index.jsp" method="POST">
+
+                <div >
+
+                    <div>
+                        <input class="file-path validate" type="text" name="ruta">
                     </div>
-                    
-                    <div class="file-path-wrapper">
-                        <input class="file-path validate" type="text" name="archivo" size="50">
+
+                    <div >
+                        <input class="file-path validate" type="text" name="archivo">
                     </div>
                 </div>
                 <br/>
-                <input class="btn waves-effect waves-light" name="enviar" type="submit" value="">
+                <input name="enviar" type="submit" value="Generar xml">
             </form>
-            
+
         </div>
-        
+
     </body>
 </html>
