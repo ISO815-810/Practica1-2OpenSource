@@ -2,25 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/E:/UNIVERSIDAD/8vo%20Cuatrimestre/ISO-810/Practica1/ProjectXml/src/java/com/opensource/practica2/ws/EstudianteWS.java</file>
-            <file>file:/E:/UNIVERSIDAD/8vo%20Cuatrimestre/ISO-810/Practica1/ProjectXml/src/java/com/opensource/practica2/service/EstudianteServiceImpl.java</file>
-            <file>file:/E:/UNIVERSIDAD/8vo%20Cuatrimestre/ISO-810/Practica1/ProjectXml/src/conf/persistence.xml</file>
-            <file>file:/E:/UNIVERSIDAD/8vo%20Cuatrimestre/ISO-810/Practica1/ProjectXml/src/java/com/opensource/practica2/domain/Estudiantes.java</file>
-            <file>file:/E:/UNIVERSIDAD/8vo%20Cuatrimestre/ISO-810/Practica1/ProjectXml/web/index.xhtml</file>
-            <file>file:/E:/UNIVERSIDAD/8vo%20Cuatrimestre/ISO-810/Practica1/ProjectXml/web/test-resbeans.html</file>
-            <file>file:/E:/UNIVERSIDAD/8vo%20Cuatrimestre/ISO-810/Practica1/ProjectXml/web/cg.gif</file>
-            <file>file:/E:/UNIVERSIDAD/8vo%20Cuatrimestre/ISO-810/Practica1/ProjectXml/src/java/com/opensource/practica2/eis/EstudianteDaoImpl.java</file>
-            <file>file:/E:/UNIVERSIDAD/8vo%20Cuatrimestre/ISO-810/Practica1/ProjectXml/src/java/com/opensource/practica2/service/EstudianteServiceWS.java</file>
-            <file>file:/E:/UNIVERSIDAD/8vo%20Cuatrimestre/ISO-810/Practica1/ProjectXml/web/cc.gif</file>
-            <file>file:/E:/UNIVERSIDAD/8vo%20Cuatrimestre/ISO-810/Practica1/ProjectXml/web/item.gif</file>
-            <file>file:/E:/UNIVERSIDAD/8vo%20Cuatrimestre/ISO-810/Practica1/ProjectXml/web/app.gif</file>
-            <file>file:/E:/UNIVERSIDAD/8vo%20Cuatrimestre/ISO-810/Practica1/ProjectXml/web/test-resbeans.js</file>
-            <file>file:/E:/UNIVERSIDAD/8vo%20Cuatrimestre/ISO-810/Practica1/ProjectXml/web/collapse.gif</file>
-            <file>file:/E:/UNIVERSIDAD/8vo%20Cuatrimestre/ISO-810/Practica1/ProjectXml/web/WEB-INF/web.xml</file>
-            <file>file:/E:/UNIVERSIDAD/8vo%20Cuatrimestre/ISO-810/Practica1/ProjectXml/web/expand.gif</file>
-            <file>file:/E:/UNIVERSIDAD/8vo%20Cuatrimestre/ISO-810/Practica1/ProjectXml/src/java/com/opensource/practica2/eis/EstudianteDao.java</file>
-            <file>file:/E:/UNIVERSIDAD/8vo%20Cuatrimestre/ISO-810/Practica1/ProjectXml/web/og.gif</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
