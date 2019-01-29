@@ -6,7 +6,6 @@
 package com.opensource.practica2.application;
 
 import com.opensource.practica2.connection.Consultas;
-import com.opensource.practica2.connection.MyConnection;
 import java.sql.ResultSet;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -16,9 +15,8 @@ import com.sun.org.apache.xml.internal.serialize.XMLSerializer;
 import java.io.File;
 import java.io.FileWriter;
 import java.nio.file.FileAlreadyExistsException;
+import java.sql.SQLException;
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -26,7 +24,7 @@ import java.util.logging.Logger;
  */
 public class BuildXml {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         Scanner sc = new Scanner(System.in);
 
@@ -43,20 +41,16 @@ public class BuildXml {
             /**
              * Step 1 : Build customer XML DOM
              */
-            Document xmlDoc = buildEmployeeXML(Consultas.Estudiantes());
+            Document xmlDoc = buildXML(Consultas.Estudiantes());
 
             /**
              * Step 2: Write output to a file
              */
             File outputFile = new File(pathComplete);
-
             printDOM(xmlDoc, outputFile);
 
-        } catch (FileAlreadyExistsException ex) {
+        } catch (FileAlreadyExistsException | SQLException ex ) {
             System.out.println("file alread present at this location");
-
-        } catch (Exception ex) {
-
             System.out.println("Really poor exception handling " + ex.toString());
         }
     }
@@ -77,7 +71,7 @@ public class BuildXml {
     }
 
     /*Build XML DOcument from database. The XML object is returned to main method where it is written to flat file.*/
-    private static Document buildEmployeeXML(ResultSet _studentRS)
+    private static Document buildXML(ResultSet _studentRS)
             throws Exception {
 
         Document xmlDoc = new DocumentImpl();
