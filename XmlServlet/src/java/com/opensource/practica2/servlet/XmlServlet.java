@@ -110,6 +110,7 @@ public class XmlServlet extends HttpServlet {
                 System.out.println("Really poor exception handling " + ex.toString());
 
             } catch (Exception ex) {
+                
                 ex.printStackTrace();
             }
         }
