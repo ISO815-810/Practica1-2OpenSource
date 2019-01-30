@@ -14,7 +14,7 @@
     </head>
     <body>
         <div class="row">
-            <form action="XmlServlet" method="get" class="col s12">
+            <form action="XmlServlet" method="post" class="col s12">
                 <div class="row">
                     <div class="input-field col s6">
                         <input  id="ruta" class="validate" placeholder="C:\\" type="text" name="ruta">
