@@ -1,12 +1,14 @@
 # Practica1-2OpenSource
 Aqui se encontraran los programas push y pull de la practica 1&2 perteneciente a la materia ISO-810. Integración de aplicaciones con Tecnologia Open Source
 
-
-## Practica0Push
-Esta creada en consola, y la misma genera el archivo xml, con DOM Parser para que el otro programa pull lo lea...
-
 ## Practica1&2Push
 Esta creada con una aplicacion web service con SOAP, este ws buscara de la bbdd la info de los estudiantes y generara el XML.
+
+## ProyectoXML
+Aplicacion creada en consola, que crea un xml con el metodo de DOM Parser.
+
+## XmlServlet
+Este proyecto es web utilizando jsp y servlet del proyecto ProyectoXML consola.
 
 ## Getting Started
 
