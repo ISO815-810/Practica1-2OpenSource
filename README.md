@@ -18,9 +18,9 @@ If you want to contribute to the application as a contributor to the project, ma
 
 ### Installing
 
-Clona el proyecto
-El Driver de PostgreSQL remotamente con ElephantSQL
-Usa el IDE de tu prefencia, Nosotros utilizamos Netbeans8.2
+#### Clona el proyecto
+#### El Driver de PostgreSQL remotamente con ElephantSQL
+#### Usa el IDE de tu prefencia, Nosotros utilizamos Netbeans8.2
 
 ## Built With
 
