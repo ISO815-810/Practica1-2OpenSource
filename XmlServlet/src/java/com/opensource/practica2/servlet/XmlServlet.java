@@ -109,6 +109,8 @@ public class XmlServlet extends HttpServlet {
                 ex.printStackTrace();
             }
         }
+        
+        response.sendRedirect("index.jsp");
     }
 
     /**
