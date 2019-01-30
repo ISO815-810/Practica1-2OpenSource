@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<empresa>
+    <empleado id="1">
+        <nombre>José Ernesto</nombre>
+        <username>jose</username>
+        <password>321423</password>
+    </empleado>
+
+    <empleado id="3">
+        <nombre>Jorge Sosa</nombre>
+        <username>jsosa</username>
+        <password>101001</password>
+    </empleado>
+
+    <empleado id="3">
+        <nombre>Jorge Sosa</nombre>
+        <username>jsosa</username>
+        <password>101001</password>
+    </empleado>
+
+    <empleado id="3">
+        <nombre>Jorge Sosa</nombre>
+        <username>jsosa</username>
+        <password>101001</password>
+    </empleado>
+
+    <empleado id="3">
+        <nombre>Jorge Sosa</nombre>
+        <username>jsosa</username>
+        <password>101001</password>
+    </empleado>
+
+    <empleado id="3">
+        <nombre>Jorge Sosa</nombre>
+        <username>jsosa</username>
+        <password>101001</password>
+    </empleado>
+</empresa>
