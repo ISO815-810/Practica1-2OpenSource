@@ -53,6 +53,7 @@ public class BuildXML {
             Element studentId = xmlDoc.createElement("id");
             Element studentCedula = xmlDoc.createElement("cedula");
             Element studentMatricula = xmlDoc.createElement("matricula");
+            Element studentCarrera = xmlDoc.createElement("carreraAbrev");
             Element studentCrdtsTotal = xmlDoc.createElement("crdtsTotal");
             Element studentCrdtsCursados = xmlDoc.createElement("crdtsCursados");
 
@@ -60,6 +61,7 @@ public class BuildXML {
             studentId.appendChild(xmlDoc.createTextNode(_studentRS.getString("id")));
             studentCedula.appendChild(xmlDoc.createTextNode(_studentRS.getString("cedula")));
             studentMatricula.appendChild(xmlDoc.createTextNode(_studentRS.getString("matricula")));
+            studentCarrera.appendChild(xmlDoc.createTextNode(_studentRS.getString("carreraAbrev")));
             studentCrdtsTotal.appendChild(xmlDoc.createTextNode(_studentRS.getString("crdtsTotal")));
             studentCrdtsCursados.appendChild(xmlDoc.createTextNode(_studentRS.getString("crdtsCursados")));
 
@@ -67,12 +69,14 @@ public class BuildXML {
             emp.appendChild(studentId);
             emp.appendChild(studentCedula);
             emp.appendChild(studentMatricula);
+            emp.appendChild(studentCarrera);
             emp.appendChild(studentCrdtsTotal);
             emp.appendChild(studentCrdtsCursados);
 
             /* Appending emp to the Root Class*/
             rootElement.appendChild(emp);
         }
+        
         return xmlDoc;
     }
 }
