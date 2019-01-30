@@ -7,24 +7,19 @@
     </head>
     <body>
         <div >
-
-            <form action="index.jsp" method="POST">
-
+            <form action="XmlServlet" method="get">
                 <div >
-
                     <div>
-                        <input class="file-path validate" type="text" name="ruta">
+                        Ruta: <input class="file-path validate" type="text" name="ruta">
                     </div>
 
                     <div >
-                        <input class="file-path validate" type="text" name="archivo">
+                       Nombre Archivo: <input class="file-path validate" type="text" name="archivo">
                     </div>
                 </div>
                 <br/>
                 <input name="enviar" type="submit" value="Generar xml">
             </form>
-
         </div>
-
     </body>
 </html>
