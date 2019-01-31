@@ -49,8 +49,8 @@ public class CrearXml {
         }
     }
 
-    public static void insertarEstudiantes(int id, String cedula, String matricula, 
-            String carrera, int creditosTotales, int creditosCursados) 
+    public static void insertarEstudiantes(int id, String cedula, String matricula,
+            String carrera, int creditosTotales, int creditosCursados)
             throws SQLException {
 
         Conexion conn = new Conexion();
@@ -58,7 +58,7 @@ public class CrearXml {
 
         Connection con = conn.obtenerConexion();
         try {
-            ps = con.prepareStatement("insert into Estudiantes_Fundapec values (?,?,?,?,?,?)");
+            ps = con.prepareStatement("INSERT INTO estudiantes_fundapec(id,cedula,matricula,carrera,creditos_totales,creditos_cursados) VALUES(?,?,?,?,?,?)");
             ps.setInt(1, id);
             ps.setString(2, cedula);
             ps.setString(3, matricula);
@@ -71,7 +71,7 @@ public class CrearXml {
             if (insertados > 0) {
                 System.out.println("Registro insertado correctamente.");
             } else {
-                System.out.println("Registro no insertado");
+                System.out.println("Registros no insertados");
             }
 
         } catch (SQLException ex) {
