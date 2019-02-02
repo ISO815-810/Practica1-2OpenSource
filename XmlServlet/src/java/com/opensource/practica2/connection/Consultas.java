@@ -16,7 +16,7 @@ import java.sql.SQLException;
  */
 public class Consultas {
 
-    private static final String SELECT_ESTUDIANTES = "SELECT * FROM Estudiante";
+    private static final String SELECT_ESTUDIANTES = "SELECT * FROM Estudiantes";
 
     public static ResultSet Estudiantes() {
         Connection conn = null;
@@ -32,8 +32,6 @@ public class Consultas {
         } catch (SQLException e) {
 
             e.printStackTrace(System.out);
-        } finally {
-            MyConnection.close(conn);
         }
 
         return rs;

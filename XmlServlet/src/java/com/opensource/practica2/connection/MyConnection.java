@@ -18,15 +18,13 @@ import java.sql.SQLException;
  */
 public class MyConnection {
 
-    private static final String JDBC_DRIVER = "org.postgresql.Driver";
-
-    private static final String JDBC_SERVER_NAME = "elmer.db.elephantsql.com";
-    private static final String JBDC_DATABASE_NAME = "dliwqbdg";
-    //"jdbc:postgresql://localhost/test?user=fred&password=secret&ssl=true";
-    private static final String JDBC_URL = "jdbc:postgresql://" + JDBC_SERVER_NAME + "/" + JBDC_DATABASE_NAME + "?useSSL=false";
-    //private static final String JDBC_URL = "jdbc:mysql://" + JDBC_SERVER_NAME + "/" + JBDC_DATABASE_NAME + "?useSSL=false";
-    private static final String JDBC_USER = "dliwqbdg";
-    private static final String JDBC_PASS = "d8OJSmrxGTiPFEAbTvlemFJIRKbWIIMy";
+    private static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+    //El puerto es opcional
+    private static final String JDBC_SERVER_NAME = "localhost";
+    private static final String JBDC_DATABASE_NAME = "fundapec";
+    private static final String JDBC_URL = "jdbc:mysql://" + JDBC_SERVER_NAME + "/" + JBDC_DATABASE_NAME + "?useSSL=false";
+    private static final String JDBC_USER = "root";
+    private static final String JDBC_PASS = "1234";
     private static Driver driver = null;
 
     //Para que no haya problemas al obtener la conexion de

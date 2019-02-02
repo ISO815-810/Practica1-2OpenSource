@@ -43,7 +43,7 @@ public class BuildXML {
 
         while (_studentRS.next()) {
 
-            Element emp = xmlDoc.createElement("estudiante");
+            Element emp = xmlDoc.createElement("Estudiante");
             //replace employee with country for country tag
 
             /* Build the CustomerId as a Attribute*/
@@ -51,19 +51,19 @@ public class BuildXML {
 
             /* Creating elements within customer DOM*/
             Element studentId = xmlDoc.createElement("id");
-            Element studentCedula = xmlDoc.createElement("cedula");
-            Element studentMatricula = xmlDoc.createElement("matricula");
+            Element studentCedula = xmlDoc.createElement("cedulaEstudiante");
+            Element studentMatricula = xmlDoc.createElement("matriculaEstudiante");
             Element studentCarrera = xmlDoc.createElement("carreraAbrev");
             Element studentCrdtsTotal = xmlDoc.createElement("crdtsTotal");
             Element studentCrdtsCursados = xmlDoc.createElement("crdtsCursados");
 
             /* Populating Customer DOM with Data*/
-            studentId.appendChild(xmlDoc.createTextNode(_studentRS.getString("id")));
-            studentCedula.appendChild(xmlDoc.createTextNode(_studentRS.getString("cedula")));
-            studentMatricula.appendChild(xmlDoc.createTextNode(_studentRS.getString("matricula")));
-            studentCarrera.appendChild(xmlDoc.createTextNode(_studentRS.getString("carreraAbrev")));
-            studentCrdtsTotal.appendChild(xmlDoc.createTextNode(_studentRS.getString("crdtsTotal")));
-            studentCrdtsCursados.appendChild(xmlDoc.createTextNode(_studentRS.getString("crdtsCursados")));
+            studentId.appendChild(xmlDoc.createTextNode(_studentRS.getString("Id")));
+            studentCedula.appendChild(xmlDoc.createTextNode(_studentRS.getString("CedulaEstudiante")));
+            studentMatricula.appendChild(xmlDoc.createTextNode(_studentRS.getString("MatriculaEstudiante")));
+            studentCarrera.appendChild(xmlDoc.createTextNode(_studentRS.getString("CarreraAbrev")));
+            studentCrdtsTotal.appendChild(xmlDoc.createTextNode(_studentRS.getString("CreditosTotal")));
+            studentCrdtsCursados.appendChild(xmlDoc.createTextNode(_studentRS.getString("CreditosCursados")));
 
             /* Adding the empname and role elements to the employee Element*/
             emp.appendChild(studentId);
