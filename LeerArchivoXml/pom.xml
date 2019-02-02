@@ -12,9 +12,9 @@
             <version>2.3.0-jaxb-1.0.6</version>
         </dependency>
         <dependency>
-            <groupId>postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>9.1-901-1.jdbc4</version>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.23</version>
         </dependency>
     </dependencies>
     <properties>

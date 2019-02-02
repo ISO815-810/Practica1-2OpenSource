@@ -27,7 +27,7 @@ public class CrearXml {
             DocumentBuilder documentBuilder = dbf.newDocumentBuilder();
             Document document = documentBuilder.parse(archivo);
             document.getDocumentElement().normalize();
-            NodeList listaEmpleados = document.getElementsByTagName("estudiante");
+            NodeList listaEmpleados = document.getElementsByTagName("Estudiante");
 
             for (int temp = 0; temp < listaEmpleados.getLength(); temp++) {
                 Node nodo = listaEmpleados.item(temp);
@@ -36,8 +36,8 @@ public class CrearXml {
                     Element element = (Element) nodo;
 
                     int id = Integer.parseInt(element.getElementsByTagName("id").item(0).getTextContent());
-                    String cedula = element.getElementsByTagName("cedula").item(0).getTextContent();
-                    String matricula = element.getElementsByTagName("matricula").item(0).getTextContent();
+                    String cedula = element.getElementsByTagName("cedulaEstudiante").item(0).getTextContent();
+                    String matricula = element.getElementsByTagName("matriculaEstudiante").item(0).getTextContent();
                     String carrera = element.getElementsByTagName("carreraAbrev").item(0).getTextContent();
                     int creditos_totales = Integer.parseInt(element.getElementsByTagName("crdtsTotal").item(0).getTextContent());
                     int creditos_cursados = Integer.parseInt(element.getElementsByTagName("crdtsCursados").item(0).getTextContent());
@@ -53,12 +53,11 @@ public class CrearXml {
             String carrera, int creditosTotales, int creditosCursados)
             throws SQLException {
 
-        Conexion conn = new Conexion();
         PreparedStatement ps;
 
-        Connection con = conn.obtenerConexion();
+        Connection con = Conexion.getConnection();
         try {
-            ps = con.prepareStatement("INSERT INTO estudiantes_fundapec(id,cedula,matricula,carrera,creditos_totales,creditos_cursados) VALUES(?,?,?,?,?,?)");
+            ps = con.prepareStatement("INSERT INTO estudiantes_fundapec(IdEstudiante,Cedula,Matricula,Carrera,Creditos_totales,Creditos_cursados) VALUES(?,?,?,?,?,?)");
             ps.setInt(1, id);
             ps.setString(2, cedula);
             ps.setString(3, matricula);
@@ -75,6 +74,7 @@ public class CrearXml {
             }
 
         } catch (SQLException ex) {
+            ex.printStackTrace(System.out);
         }
 
     }

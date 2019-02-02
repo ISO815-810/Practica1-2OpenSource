@@ -11,7 +11,9 @@ CREATE TABLE Estudiantes(
     CreditosCursados smallint not null
 )ENGINE=InnoDb;
 
-INSERT INTO Estudiantes VALUES(1,'40215563657','20162511','ISO',237,105);
-INSERT INTO Estudiantes VALUES(2,'00104070560','20162223','ISC',247,190);
+INSERT INTO Estudiantes(CedulaEstudiante, MatriculaEstudiante, CarreraAbrev, CreditosTotal, CreditosCursados) 
+VALUES('40215563657','20162511','ISO',237,105);
+INSERT INTO Estudiantes(CedulaEstudiante, MatriculaEstudiante, CarreraAbrev, CreditosTotal, CreditosCursados) 
+ VALUES('00104070560','20162223','ISC',247,190);
 
 SELECT * FROM Estudiantes;
